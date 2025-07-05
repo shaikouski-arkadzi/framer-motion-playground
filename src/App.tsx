@@ -23,6 +23,12 @@ function App() {
       <motion.p whileHover={{ color: "red" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </motion.p>
+      <motion.p
+        initial={{ x: -1000, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </motion.p>
     </>
   );
 }
