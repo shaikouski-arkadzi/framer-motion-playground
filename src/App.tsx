@@ -4,6 +4,11 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
+  const pVariants = {
+    hidden: { x: -1000, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+
   return (
     <>
       <motion.img
@@ -27,6 +32,9 @@ function App() {
         initial={{ x: -1000, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
       >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </motion.p>
+      <motion.p initial="hidden" animate="visible" variants={pVariants}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </motion.p>
     </>
