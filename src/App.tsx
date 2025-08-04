@@ -9,6 +9,19 @@ function App() {
     visible: { x: 0, opacity: 1 },
   };
 
+  const listVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.5,
+      },
+    }),
+  };
+
+  const items = ["Text 1", "Text 2", "Text 3"];
+
   return (
     <>
       <motion.img
@@ -37,6 +50,20 @@ function App() {
       <motion.p initial="hidden" animate="visible" variants={pVariants}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </motion.p>
+
+      <ul>
+        {items.map((item, index) => (
+          <motion.li
+            key={item}
+            variants={listVariants}
+            initial="hidden"
+            animate="visible"
+            custom={index}
+          >
+            {item}
+          </motion.li>
+        ))}
+      </ul>
     </>
   );
 }
