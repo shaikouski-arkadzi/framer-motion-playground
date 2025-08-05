@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import viteLogo from "/vite.svg";
 
 import "./App.css";
+import AnimateAppearance from "./AnimateAppearance";
 
 function App() {
   const pVariants = {
@@ -64,6 +65,9 @@ function App() {
           </motion.li>
         ))}
       </ul>
+      <AnimateAppearance title="Toggle content">
+        Animate Appearance
+      </AnimateAppearance>
     </>
   );
 }
