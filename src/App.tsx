@@ -3,6 +3,7 @@ import viteLogo from "/vite.svg";
 
 import "./App.css";
 import AnimateAppearance from "./AnimateAppearance";
+import Menu from "./Menu";
 
 function App() {
   const pVariants = {
@@ -68,6 +69,7 @@ function App() {
       <AnimateAppearance title="Toggle content">
         Animate Appearance
       </AnimateAppearance>
+      <Menu />
     </>
   );
 }
