@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import AnimateAppearance from "./AnimateAppearance";
 import Menu from "./Menu";
+import Intersaction from "./Intersaction";
 
 function App() {
   const pVariants = {
@@ -70,6 +71,7 @@ function App() {
         Animate Appearance
       </AnimateAppearance>
       <Menu />
+      <Intersaction />
     </>
   );
 }
