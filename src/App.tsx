@@ -5,6 +5,7 @@ import "./App.css";
 import AnimateAppearance from "./AnimateAppearance";
 import Menu from "./Menu";
 import Intersaction from "./Intersaction";
+import DragnDrop from "./DragnDrop";
 
 function App() {
   const pVariants = {
@@ -72,6 +73,7 @@ function App() {
       </AnimateAppearance>
       <Menu />
       <Intersaction />
+      <DragnDrop />
     </>
   );
 }
