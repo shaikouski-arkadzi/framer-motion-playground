@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 import viteLogo from "/vite.svg";
 
 import "./App.css";
@@ -6,6 +6,7 @@ import AnimateAppearance from "./AnimateAppearance";
 import Menu from "./Menu";
 import Intersaction from "./Intersaction";
 import DragnDrop from "./DragnDrop";
+import { StickyHeader } from "./StickyHeader";
 
 function App() {
   const pVariants = {
@@ -26,8 +27,14 @@ function App() {
 
   const items = ["Text 1", "Text 2", "Text 3"];
 
+  const { scrollY } = useScroll();
+
+  const offsetY = [0, 300];
+  const marginTop = useTransform(scrollY, offsetY, offsetY);
+
   return (
     <>
+      <StickyHeader offsetY={offsetY} scrollY={scrollY} />
       <motion.img
         src={viteLogo}
         className="logo"
@@ -41,6 +48,7 @@ function App() {
           repeatType: "reverse",
           type: "spring",
         }}
+        style={{ marginTop }}
       />
       <motion.p whileHover={{ color: "red" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
